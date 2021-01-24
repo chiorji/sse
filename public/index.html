@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server Sent Event</title>
+  <link rel="stylesheet" href="/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <div class="container-fluid p-0">
+    <header class="jumbotron bg-success text-light rounded-0 ">
+      <h1 class="m-0 font-weight-bold">SSE Chat Application</h1>
+      <p>A simple implementation of a chat app using Server Sent Events(SSE)</p>
+    </header>
+
+    <main class="container mb-5">
+      <div class="row border-danger mb-5">
+        <div class="col-12 mb-5 chat__messages">
+          <ul class="list-unstyled chat__messages--list">
+            <li class="messages server--messages border">
+              <time class="messages--time">06:38</time>
+              <p class="messages--text">
+                This message is from server. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit, numquam totam
+                dignissimos sed cum minus enim, quae aliquid dolorum perspiciatis, cupiditate odit alias tempora iste temporibus
+                deserunt perferendis expedita.
+              </p>
+            </li>
+
+            <li class="messages client--messages border">
+              <time class="messages--time">06:38</time>
+              <p class="messages--text">
+                  This message is from client. Lorem, ipsum dolor sit amet consectetur adipisicing elit. In sed magni obcaecati recusandae
+                  ex pariatur eveniet velit? Dolores quaerat, magnam quibusdam culpa cupiditate libero iure voluptatum, sed nulla aliquam
+                  quia.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="chat__footer bg-light border-top">
+      <form class="chat__input">
+        <input type="text" class="form-control input--field" autofocus />
+        <button class="btn btn-warning input--btn">Send message</button>
+      </form>
+    </footer>
+  </div>
+<script src="/scripts/index.js"></script>
+</body>
+</html>

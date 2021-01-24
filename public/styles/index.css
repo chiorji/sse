@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@font-face{
+  font-family: 'Avenir Bold';
+  src: url(../fonts/AvenirLTStd-Black.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Avenir Semi-Bold';
+  src: url(../fonts/AvenirLTStd-Roman.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  font-family: "Avenir Bold";
+}
+
+.chat__messages{
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  position: relative;
+  font-family: "Avenir Semi-Bold";
+  font-weight: 400;
+}
+
+.chat__messages--list{
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+}
+
+.messages {
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  padding: 1.5rem;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages--time{
+  align-self: flex-end;
+  font-size: 12px;
+  background-color: white;
+  padding: .2rem 1rem;
+  border-radius: 50px;
+}
+
+.client--messages{
+  align-self: flex-end;
+  background-color: aliceblue;
+}
+
+/* FOOTER / INPUT */
+.chat__footer {
+  font-family: "Avenir Semi-Bold";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.chat__input{
+  display: flex;
+  bottom: 1rem;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.input--btn{
+  width: 30%;
+  margin-left: 1rem;
+}
