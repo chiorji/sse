@@ -1,3 +1,4 @@
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 const {createReadStream} = require('fs')
 const { join } = require('path')
 const {EventEmitter} = require('events')
@@ -5,6 +6,7 @@ const express = require('express')
 
 const app = express()
 const chatEmitter = new EventEmitter()
+process.env.NODE_ENV.toLowerCase() !== 'production' && app.use(require('morgan')('dev'))
 
 app.set('PORT', process.env.PORT || 4000)
 
@@ -25,7 +27,7 @@ app.get('/sse', (req, res) => {
 
 
   const onMessage = message => {
-    console.log('onMessage >> ', message)
+    console.log('onMessage >> ', `data: ${message}`)
     res.write(`data: ${message}`)
   }
 
